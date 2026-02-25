@@ -28,7 +28,7 @@ export default function Home() {
       <div className="absolute top-10 left-10 w-4 h-4 bg-pink-500 rounded-full animate-pulse opacity-70"></div>
       <div className="absolute top-20 right-20 w-3 h-3 bg-pink-400 rounded-full animate-pulse opacity-60"></div>
       <div className="absolute bottom-20 left-24 w-3 h-3 bg-pink-300 rounded-full animate-pulse opacity-50"></div>
-
+   <div className="absolute bottom-20 right-24 w-3 h-3 bg-pink-300 rounded-full animate-pulse opacity-50"></div>    
     </main>
   );
 }
