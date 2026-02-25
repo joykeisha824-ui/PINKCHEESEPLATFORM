@@ -24,3 +24,19 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Neon glow for the title */
+.neon-glow {
+  text-shadow:
+    0 0 5px #ff1493,
+    0 0 10px #ff1493,
+    0 0 20px #ff1493,
+    0 0 40px #ff1493;
+}
+
+/* Neon glow for buttons */
+.neon-button {
+  box-shadow:
+    0 0 10px #ff1493,
+    0 0 20px #ff1493,
+    0 0 40px #ff1493;
+}
