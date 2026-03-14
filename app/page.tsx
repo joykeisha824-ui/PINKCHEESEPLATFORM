@@ -1,59 +1,99 @@
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-hidden px-6">
+    <main className="min-h-screen bg-neutral-950 text-white">
 
-      {/* GLITTER GRADIENT BACKGROUND */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#ff1493,#000)] opacity-40"></div>
+      {/* NAVBAR */}
+      <nav className="w-full border-b border-neutral-800 px-8 py-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-pink-500">Pink Cheese</h1>
 
-      {/* SPARKLES */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1.5 h-1.5 bg-pink-300 rounded-full sparkle"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+        <div className="flex gap-8 text-sm text-neutral-300">
+          <button className="hover:text-pink-400">Dashboard</button>
+          <button className="hover:text-pink-400">Send</button>
+          <button className="hover:text-pink-400">Activity</button>
+          <button className="hover:text-pink-400">Profile</button>
+        </div>
+      </nav>
 
-      {/* HERO TITLE */}
-      <h1 className="text-6xl md:text-8xl font-extrabold text-pink-500 drop-shadow-[0_0_25px_#ff1493] text-center z-10">
-        Pink Cheese
-      </h1>
+      <div className="max-w-6xl mx-auto px-6 py-10 grid gap-10">
 
-      <p className="mt-6 text-lg text-pink-200 text-center max-w-xl z-10">
-        Send money. Spark confidence. 💖
-      </p>
+        {/* BALANCE CARD */}
+        <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-8 flex justify-between items-center">
 
-      {/* BUTTONS */}
-      <div className="flex gap-6 mt-10 z-10">
+          <div>
+            <p className="text-neutral-400 text-sm">Available Balance</p>
+            <h2 className="text-4xl font-bold text-pink-500 mt-2">$420.69</h2>
+          </div>
 
-        <button className="px-8 py-4 rounded-full bg-pink-600 text-lg font-bold shadow-[0_0_25px_#ff1493] hover:scale-105 hover:bg-pink-500 transition-all">
-          💖 Send Pink
-        </button>
+          <div className="flex gap-4">
+            <button className="px-6 py-3 bg-pink-600 rounded-xl hover:bg-pink-500">
+              Send Money
+            </button>
 
-        <button className="px-8 py-4 rounded-full border border-pink-500 text-pink-300 hover:bg-pink-600/20 transition-all">
-          ✨ Learn More
-        </button>
+            <button className="px-6 py-3 border border-neutral-700 rounded-xl hover:border-pink-500">
+              Request
+            </button>
+          </div>
 
-      </div>
+        </div>
 
-      {/* FLOATING GLASS CARD */}
-      <div className="mt-16 w-full max-w-md p-8 rounded-3xl backdrop-blur-xl bg-pink-500/10 border border-pink-400 shadow-[0_0_40px_#ff1493] text-center z-10">
+        {/* GRID SECTION */}
+        <div className="grid md:grid-cols-2 gap-8">
 
-        <p className="text-pink-200 text-sm">Your Wallet</p>
+          {/* QUICK SEND */}
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+            <h3 className="text-lg font-semibold mb-4">Quick Send</h3>
 
-        <h2 className="text-4xl font-bold text-pink-400 mt-2 drop-shadow-[0_0_20px_#ff1493]">
-          $420.69
-        </h2>
+            <div className="flex flex-col gap-3">
+              <button className="p-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-left">
+                Send to Alex
+              </button>
+              <button className="p-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-left">
+                Send to Maya
+              </button>
+              <button className="p-3 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-left">
+                Send to Jordan
+              </button>
+            </div>
+          </div>
 
-        <button className="mt-6 px-6 py-3 rounded-full bg-pink-600 shadow-[0_0_20px_#ff1493] hover:bg-pink-500 transition-all">
-          Send Money 💸
-        </button>
+          {/* ACTIVITY */}
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6">
+            <h3 className="text-lg font-semibold mb-4">Recent Activity</h3>
+
+            <div className="flex flex-col gap-3 text-sm text-neutral-300">
+              <p>Paid Maya $15</p>
+              <p>Received $40 from Jordan</p>
+              <p>Sent Alex $10</p>
+            </div>
+          </div>
+
+        </div>
+
+        {/* FEATURES */}
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl">
+            <h4 className="font-semibold">Fast Payments</h4>
+            <p className="text-neutral-400 text-sm mt-2">
+              Send and receive instantly.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl">
+            <h4 className="font-semibold">Peer-to-Peer</h4>
+            <p className="text-neutral-400 text-sm mt-2">
+              Pay anyone securely.
+            </p>
+          </div>
+
+          <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-xl">
+            <h4 className="font-semibold">Secure</h4>
+            <p className="text-neutral-400 text-sm mt-2">
+              End-to-end encrypted transactions.
+            </p>
+          </div>
+
+        </div>
 
       </div>
 
