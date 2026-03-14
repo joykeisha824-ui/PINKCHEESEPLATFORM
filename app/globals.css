@@ -43,3 +43,12 @@ body {
     0 0 20px #ff1493,
     0 0 40px #ff1493;
 }
+@keyframes sparkle {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+.sparkle {
+  animation: sparkle 3s infinite ease-in-out;
+}
